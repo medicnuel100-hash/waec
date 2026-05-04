@@ -12,9 +12,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Subtle gray outside */
+            background-color: #f3f4f6;
         }
-        /* Hide scrollbar for a cleaner look but keep functionality */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -29,7 +28,6 @@
             background: #94a3b8; 
         }
         
-        /* Smooth fade-in animation */
         .fade-in {
             animation: fadeIn 0.6s ease-out forwards;
         }
@@ -38,7 +36,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Custom radio/checkbox colors */
         .custom-check:checked {
             background-color: #2563eb;
             border-color: #2563eb;
@@ -73,42 +70,43 @@
 
         <form id="challengeForm" class="p-8 space-y-8">
             
+            <!-- Personal Information -->
             <div>
                 <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Personal Information</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="John Doe">
+                        <input type="text" name="fullName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="John Doe">
                     </div>
 
-<div>
-    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-    <input type="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="E.g abiodun@gmail.com">
-</div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="E.g you@gmail.com">
+                    </div>
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Name</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="Name on your profile">
+                        <input type="text" name="whatsappName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="Name on your profile">
                     </div>
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
-                        <input type="tel" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="080XXXXXXXX">
+                        <input type="tel" name="whatsappNumber" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="080XXXXXXXX">
                     </div>
-
                 </div>
             </div>
 
+            <!-- Academic Background -->
             <div>
                 <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Academic Background</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">What's the name of your Secondary School?</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Saint College Lagos">
+                        <input type="text" name="schoolName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Saint College Lagos">
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">What's your Department?</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Science, Art or Commercial">
+                        <input type="text" name="department" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Science, Art or Commercial">
                     </div>
                     
                     <div class="md:col-span-2 p-4 bg-gray-50 rounded-xl border border-gray-200">
@@ -123,14 +121,22 @@
                                 <span class="text-gray-700">No</span>
                             </label>
                         </div>
+                        
+                        <!-- ADDED: The missing conditional input fields -->
+                        <div id="score_yes_div" class="hidden mt-4 pt-4 border-t border-gray-200">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">What was your previous WAEC/GCE grade?</label>
+                            <input type="text" id="utme_score" name="previous_grade" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 transition-all outline-none" placeholder="e.g. 5 Credits, 2 Passes">
+                        </div>
 
-
-
+                        <div id="score_no_div" class="hidden mt-4 pt-4 border-t border-gray-200">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">What was your score in your school's mock exam?</label>
+                            <input type="text" id="mock_score" name="mock_grade" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 transition-all outline-none" placeholder="e.g. 60%">
+                        </div>
                     </div>
 
                     <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-700 mb-1">What is your current level of preparation for 2026 WAEC?</label>
-                        <select required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                        <select name="prepLevel" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none bg-white">
                             <option value="" disabled selected>Select a level</option>
                             <option value="Just starting">Just starting</option>
                             <option value="Average">Average / Fair</option>
@@ -141,6 +147,7 @@
                 </div>
             </div>
 
+            <!-- Preparation & Commitment -->
             <div>
                 <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Preparation & Commitment</h2>
                 <div class="space-y-6">
@@ -164,9 +171,8 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Why do you want to join the 21 days Sprint?</label>
-                        <textarea required rows="3" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none resize-none" placeholder="Briefly tell us..."></textarea>
+                        <textarea name="joinReason" required rows="3" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none resize-none" placeholder="Briefly tell us..."></textarea>
                     </div>
-
 
                     <div class="bg-indigo-50 p-5 rounded-xl border border-indigo-100">
                         <label class="block text-sm font-medium text-indigo-900 mb-3">Are you aware joining the challenge means you MUST participate in the daily mock for the entire 21 days?</label>
@@ -177,7 +183,7 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">How consistent do you think you will be with the daily mock challenge?</label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 100% consistent">
+                        <input type="text" name="consistency" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 100% consistent">
                     </div>
                     
                     <div>
@@ -190,7 +196,7 @@
 
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">What are your 9 WAEC subjects? <span class="text-gray-400 font-normal">(Extra question)</span></label>
-                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. English, Biology, Chemistry, Physics, Civic, Marketing">
+                        <input type="text" name="subjects" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. English, Math, Biology, Chemistry, Physics...">
                     </div>
 
                 </div>
@@ -199,7 +205,7 @@
             <div class="mt-8 pt-6 border-t border-gray-200">
                 <label class="flex items-start cursor-pointer group">
                     <div class="flex items-center h-5">
-                        <input type="checkbox" required class="w-5 h-5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 transition-colors">
+                        <input type="checkbox" name="declaration" required class="w-5 h-5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 transition-colors">
                     </div>
                     <div class="ml-3 text-sm">
                         <span class="font-semibold text-red-600 block mb-1">Declaration of Truth</span>
@@ -216,8 +222,11 @@
 
         </form>
     </main>
+<script>
+        // --- GOOGLE SCRIPT URL ---
+        // Paste your generated Google Apps Script URL right here!
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyDAJV2m25LA1bRIJf2sgOnEcwkoCcTx9bJ1dzkvxT1QCfixKEuIci8nPkzxY1JIabO/exec"; 
 
-    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('challengeForm');
             const submitBtn = document.getElementById('submitBtn');
@@ -244,28 +253,54 @@
                 });
             });
 
-            // Smooth submission state simulation
+            // Live Google Sheets Submission
             form.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent page reload for demo
+                e.preventDefault(); 
+                
+                if (GOOGLE_SCRIPT_URL === "YOUR_WEB_APP_URL_GOES_HERE") {
+                    alert("Please paste your Google Script URL into the code first!");
+                    return;
+                }
                 
                 // Change button state
-                const originalText = submitBtn.innerText;
                 submitBtn.innerText = 'Submitting...';
                 submitBtn.classList.add('opacity-75', 'cursor-wait');
                 submitBtn.disabled = true;
 
-                // Simulate an API call / form submission
-                setTimeout(() => {
-                    form.innerHTML = `
-                        <div class="flex flex-col items-center justify-center p-12 text-center fade-in">
-                            <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-6">
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                // Grab the form data natively
+                const formData = new FormData(form);
+
+                // Send to Google Apps Script
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    body: formData 
+                })
+                .then(response => response.json()) 
+                .then(data => {
+                    if (data.status === 'success') {
+                        // Show Success Screen
+                        form.innerHTML = `
+                            <div class="flex flex-col items-center justify-center p-12 text-center fade-in">
+                                <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-6">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <h2 class="text-2xl font-bold text-gray-800 mb-2">Application Received!</h2>
+                                <p class="text-gray-600">Thank you for pledging to the 21 Days WAEC Sprint. We will review your application and get back to you shortly.</p>
                             </div>
-                            <h2 class="text-2xl font-bold text-gray-800 mb-2">Application Received!</h2>
-                            <p class="text-gray-600">Thank you for pledging to the 41 Days Challenge. We will review your application and get back to you shortly.</p>
-                        </div>
-                    `;
-                }, 1500);
+                        `;
+                    } else {
+                        throw new Error(data.message || "Google Script rejected the data");
+                    }
+                })
+                .catch(error => {
+                    console.error('Submission Error:', error);
+                    alert("Submission failed! Check your network and try again.");
+                    
+                    // Restore the button so they can try again
+                    submitBtn.innerText = 'Submit Application';
+                    submitBtn.classList.remove('opacity-75', 'cursor-wait');
+                    submitBtn.disabled = false;
+                });
             });
         });
     </script>
