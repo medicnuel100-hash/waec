@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>21 Days WAEC Sprint - Application Form</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Subtle gray outside */
+        }
+        /* Hide scrollbar for a cleaner look but keep functionality */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        
+        /* Smooth fade-in animation */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom radio/checkbox colors */
+        .custom-check:checked {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex items-center justify-center p-4 sm:p-8">
+
+    <main class="bg-white max-w-3xl w-full rounded-2xl shadow-2xl overflow-hidden fade-in relative">
+        
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 text-white text-center">
+            <h1 class="text-3xl font-bold tracking-tight mb-2">21 Days WAEC Sprint Challenge</h1>
+            <p class="text-blue-100 text-sm md:text-base max-w-xl mx-auto">
+                Commit to excellence. Please fill out the form below to apply for the 21 daily mock challenge.
+            </p>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mx-8 mt-8 rounded-r-md">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-blue-800 font-medium">
+                        Privacy Guaranteed: Any information you provide is strictly for selection purposes and will never be made public.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <form id="challengeForm" class="p-8 space-y-8">
+            
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Personal Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="John Doe">
+                    </div>
+
+<div>
+    <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+    <input type="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="E.g abiodun@gmail.com">
+</div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Name</label>
+                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="Name on your profile">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
+                        <input type="tel" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="080XXXXXXXX">
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Academic Background</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">What's the name of your Secondary School?</label>
+                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Saint College Lagos">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">What's your Department?</label>
+                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all outline-none" placeholder="e.g. Science, Art or Commercial">
+                    </div>
+                    
+                    <div class="md:col-span-2 p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <label class="block text-sm font-medium text-gray-700 mb-3">Have you taken WAEC before?</label>
+                        <div class="flex space-x-6 mb-4">
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="taken_utme" value="yes" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300" required>
+                                <span class="text-gray-700">Yes</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="taken_utme" value="no" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                <span class="text-gray-700">No</span>
+                            </label>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">What is your current level of preparation for 2026 WAEC?</label>
+                        <select required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                            <option value="" disabled selected>Select a level</option>
+                            <option value="Just starting">Just starting</option>
+                            <option value="Average">Average / Fair</option>
+                            <option value="Good">Good / Ready</option>
+                            <option value="Excellent">Excellent / Very Confident</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-semibold text-gray-800 border-b pb-2 mb-4">Preparation & Commitment</h2>
+                <div class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Do you currently attend any online tutorial?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center"><input type="radio" name="online_tut" value="yes" class="mr-2 custom-check" required> Yes</label>
+                                <label class="flex items-center"><input type="radio" name="online_tut" value="no" class="mr-2 custom-check"> No</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Do you currently attend any physical tutorial?</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center"><input type="radio" name="phy_tut" value="yes" class="mr-2 custom-check" required> Yes</label>
+                                <label class="flex items-center"><input type="radio" name="phy_tut" value="no" class="mr-2 custom-check"> No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Why do you want to join the 21 days Sprint?</label>
+                        <textarea required rows="3" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none resize-none" placeholder="Briefly tell us..."></textarea>
+                    </div>
+
+
+                    <div class="bg-indigo-50 p-5 rounded-xl border border-indigo-100">
+                        <label class="block text-sm font-medium text-indigo-900 mb-3">Are you aware joining the challenge means you MUST participate in the daily mock for the entire 21 days?</label>
+                        <div class="flex space-x-4">
+                            <label class="flex items-center text-indigo-800"><input type="radio" name="aware" value="yes" class="mr-2 text-indigo-600 focus:ring-indigo-500" required> Yes, I am fully aware</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">How consistent do you think you will be with the daily mock challenge?</label>
+                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 100% consistent">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Are you willing to share your WAEC result with us after the exam?</label>
+                        <div class="flex space-x-4">
+                            <label class="flex items-center"><input type="radio" name="share_result" value="yes" class="mr-2 custom-check" required> Yes, definitely</label>
+                            <label class="flex items-center"><input type="radio" name="share_result" value="no" class="mr-2 custom-check"> No</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">What are your 9 WAEC subjects? <span class="text-gray-400 font-normal">(Extra question)</span></label>
+                        <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. English, Biology, Chemistry, Physics, Civic, Marketing">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <label class="flex items-start cursor-pointer group">
+                    <div class="flex items-center h-5">
+                        <input type="checkbox" required class="w-5 h-5 border-gray-300 rounded text-blue-600 focus:ring-blue-500 transition-colors">
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <span class="font-semibold text-red-600 block mb-1">Declaration of Truth</span>
+                        <span class="text-gray-600">I solemnly swear that I did not lie or give false information in any of the details filled above. I understand that any false information will result in immediate disqualification.</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="pt-4 pb-2">
+                <button type="submit" id="submitBtn" class="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform transition-all active:scale-[0.98]">
+                    Submit Application
+                </button>
+            </div>
+
+        </form>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('challengeForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const utmeRadios = document.getElementsByName('taken_utme');
+            const scoreYesDiv = document.getElementById('score_yes_div');
+            const scoreNoDiv = document.getElementById('score_no_div');
+            const utmeInput = document.getElementById('utme_score');
+            const mockInput = document.getElementById('mock_score');
+
+            // Handle showing/hiding conditional UTME score inputs seamlessly
+            Array.from(utmeRadios).forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'yes') {
+                        scoreYesDiv.classList.remove('hidden');
+                        scoreNoDiv.classList.add('hidden');
+                        utmeInput.setAttribute('required', 'true');
+                        mockInput.removeAttribute('required');
+                    } else {
+                        scoreNoDiv.classList.remove('hidden');
+                        scoreYesDiv.classList.add('hidden');
+                        mockInput.setAttribute('required', 'true');
+                        utmeInput.removeAttribute('required');
+                    }
+                });
+            });
+
+            // Smooth submission state simulation
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent page reload for demo
+                
+                // Change button state
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Submitting...';
+                submitBtn.classList.add('opacity-75', 'cursor-wait');
+                submitBtn.disabled = true;
+
+                // Simulate an API call / form submission
+                setTimeout(() => {
+                    form.innerHTML = `
+                        <div class="flex flex-col items-center justify-center p-12 text-center fade-in">
+                            <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-6">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-800 mb-2">Application Received!</h2>
+                            <p class="text-gray-600">Thank you for pledging to the 41 Days Challenge. We will review your application and get back to you shortly.</p>
+                        </div>
+                    `;
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
